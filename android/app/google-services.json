@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "754474234926",
+    "project_id": "flutterfire-ui-codelab-f5805",
+    "storage_bucket": "flutterfire-ui-codelab-f5805.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754474234926:android:6cd863bbeaa0233dc3dbbf",
+        "android_client_info": {
+          "package_name": "com.example.gtk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfub5C2AnGM8DEkF2qre774MERVvh_Qqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754474234926:android:3c5ed588949c2a9ac3dbbf",
+        "android_client_info": {
+          "package_name": "com.example.netflix_demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfub5C2AnGM8DEkF2qre774MERVvh_Qqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754474234926:android:d9bd8880097b22b5c3dbbf",
+        "android_client_info": {
+          "package_name": "com.example.start"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfub5C2AnGM8DEkF2qre774MERVvh_Qqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
