@@ -1,11 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_demo/screens/OnboardingScreen.dart';
+import 'package:netflix_demo/firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(const MyApp());
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -67,14 +70,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
-     title: 'Netflix',
-     theme: ThemeData(
-       scaffoldBackgroundColor: Colors.black,
-       primarySwatch: Colors.blue,
-       visualDensity: VisualDensity.adaptivePlatformDensity,
-     ),
-     home: const OnboardingScreen(),
-   );
+    return MaterialApp(
+      title: 'Netflix',
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.black,
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: const OnboardingScreen(),
+    );
   }
 }
