@@ -22,6 +22,15 @@ class MovieOrSeries {
       required this.director});
 }
 
+class AppUser {
+  final String name;
+  final String email;
+  final String profileImageUrl;
+
+  AppUser(
+      {required this.name, required this.email, required this.profileImageUrl});
+}
+
 final List<MovieOrSeries> mainList = [
   MovieOrSeries(
     coverUrl: 'assets/frozen2.jpg',

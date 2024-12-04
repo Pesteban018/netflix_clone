@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_demo/screens/ProfileScreen.dart';
 import '../data/data.dart';
 import 'DetailScreen.dart';
 
@@ -7,13 +8,37 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
+void _onSelected(BuildContext context, int item) {
+  AppUser currentUser = AppUser(
+    name: 'Nombre de Usuario',
+    email: 'usuario@correo.com',
+    profileImageUrl: 'assets/neflixPPjpg',
+  );
+
+  switch (item) {
+    case 1:
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => ProfileScreen(user: currentUser)),
+      );
+      break;
+    case 2:
+      // Navigator.pushReplacement(
+      //   context,
+      //   MaterialPageRoute(builder: (context) => LoginScreen()),
+      // );
+      break;
+  }
+}
+
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff333333),
+      backgroundColor: Color.fromARGB(255, 0, 0, 0),
       appBar: AppBar(
-        backgroundColor: Color(0xff333333),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
         leading: IconButton(
           icon: const Icon(
             Icons.menu,
@@ -27,10 +52,18 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         centerTitle: true,
         actions: [
-          Container(
-            padding: EdgeInsets.all(10),
-            height: 40,
-            child: Image.asset('assets/neflixPP.jpg'),
+          PopupMenuButton<int>(
+            icon: Container(
+              padding: EdgeInsets.all(10),
+              height: 40,
+              child: Image.asset('assets/neflixPP.jpg'),
+            ),
+            onSelected: (item) => _onSelected(context, item),
+            itemBuilder: (context) => [
+              PopupMenuItem<int>(value: 0, child: Text('Perfil 1')),
+              PopupMenuItem<int>(value: 1, child: Text('Perfil 2')),
+              PopupMenuItem<int>(value: 2, child: Text('Logout')),
+            ],
           ),
         ],
         elevation: 0.0,
@@ -119,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(15),
                                           bottomRight: Radius.circular(15)),
-                                      color: Colors.white30,
+                                      color: Color.fromARGB(77, 0, 0, 0),
                                     ),
                                     child: Row(
                                       mainAxisAlignment:

@@ -12,7 +12,7 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(movieOrSeries.title),
-        backgroundColor: Color(0xff333333),
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
       body: Column(
         children: [
