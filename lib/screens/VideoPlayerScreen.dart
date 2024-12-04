@@ -16,7 +16,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(widget.videoUrl)
+    _controller = VideoPlayerController.asset(widget.videoUrl)
       ..initialize().then((_) {
         setState(() {});
         _controller.play();
@@ -34,7 +34,6 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Video Player'),
-        backgroundColor: Color(0xff333333),
       ),
       body: Center(
         child: _controller.value.isInitialized
@@ -43,18 +42,6 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                 child: VideoPlayer(_controller),
               )
             : CircularProgressIndicator(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            _controller.value.isPlaying
-                ? _controller.pause()
-                : _controller.play();
-          });
-        },
-        child: Icon(
-          _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-        ),
       ),
     );
   }
