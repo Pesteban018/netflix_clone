@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../data/data.dart';
+import 'DetailScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -104,7 +105,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       borderRadius: BorderRadius.circular(15),
                                       image: DecorationImage(
                                         fit: BoxFit.fill,
-                                        image: AssetImage(movieOrSeries.coverUrl),
+                                        image:
+                                            AssetImage(movieOrSeries.coverUrl),
                                       )),
                                 ),
                                 Positioned(
@@ -120,7 +122,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       color: Colors.white30,
                                     ),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: const [
                                         Text(
                                           'play',
@@ -204,6 +207,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                   image: AssetImage(movieOrSeries.coverUrl),
                                 )),
                           ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => DetailScreen(
+                                  movieOrSeries: movieOrSeries,
+                                ),
+                              ),
+                            );
+                          },
                         );
                       }),
                 ),
