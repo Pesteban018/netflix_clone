@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
-import '../data/data.dart';
 import 'VideoPlayerScreen.dart';
+import '../data/data.dart';
 
 class DetailScreen extends StatelessWidget {
   final MovieOrSeries movieOrSeries;
@@ -39,8 +38,7 @@ class DetailScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => VideoPlayerScreen(
-                    videoUrl:
-                        'https://www.example.com/video.mp4', // URL del video
+                    videoUrl: 'assets/los_simpson.mp4', // URL del video
                   ),
                 ),
               );
