@@ -6,7 +6,7 @@ class DetailScreen extends StatelessWidget {
   final MovieOrSeries movieOrSeries;
 
   DetailScreen({required this.movieOrSeries});
-
+//   DetailScreen({required this.movieOrSeries});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
